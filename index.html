@@ -1,22 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <h1>Página de inicio, ya tengo links</h1>
-    <a href="http://localhost:2420/formulario">
-        <button>Formulario</button>
-    </a>
-    <p></p>
-<p></p>
-
-    <a href="http://localhost:2420/informacion">
-        <button>Base de datos</button>
-    </a>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de registro</title>
+    <style>
+      body {
+        background-color: #a0d6b4;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 30px;
+        font-size: 2em;
+        color: #004d40;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        border: 3px solid #004d40;
+        padding: 40px 60px;
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: #c8e6c9;
+        font-size: 1.2em;
+      }
+      td {
+        padding: 10px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="number"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #004d40;
+        border-radius: 5px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #004d40;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #00796b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <form action="registro.php" name="" method="POST">
+      <table border="0" align="center">
+        <tr>
+          <td>Nombre:</td>
+          <td>
+            <label for="nombre"></label>
+            <input type="text" name="nombre" id="nombre" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Apellido:</td>
+          <td>
+            <label for="apellido"></label>
+            <input type="text" name="apellido" id="apellido" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Nombre de Usuario:</td>
+          <td>
+            <label for="usuario"></label>
+            <input type="text" name="usuario" id="usuario" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Contraseña:</td>
+          <td>
+            <label for="contraseña"></label>
+            <input type="password" name="contraseña" id="contraseña" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Edad:</td>
+          <td>
+            <label for="edad"></label>
+            <input type="number" name="edad" id="edad" required />
+          </td>
+        </tr>
+        <tr>
+          <td>CURP:</td>
+          <td>
+            <label for="curp"></label>
+            <input type="text" name="curp" id="curp" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Sexo:</td>
+          <td>
+            <label for="sexo"></label>
+            <input type="text" name="sexo" id="sexo" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Teléfono:</td>
+          <td>
+            <label for="telefono"></label>
+            <input type="tel" name="telefono" id="telefono" required />
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="submit" name="enviar" id="enviar" value="Registrarse" />
+          </td>
+          <td align="center">
+            <input type="reset" name="borrar" id="borrar" value="Restablecer" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
 </html>
